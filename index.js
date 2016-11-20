@@ -11,10 +11,18 @@ function basicEnvironment(callback)
   process.umask(0066)
 
   // Remove from initramfs the files only needed on boot to free memory
-  rimraf('/bin/nodeos-mount-filesystems')
-  rimraf('/init')
-  rimraf('/lib/node_modules/nodeos-mount-filesystems')
-  rimraf('/sbin')
+  try
+  {
+    rimraf('/bin/nodeos-mount-filesystems')
+    rimraf('/init')
+    rimraf('/lib/node_modules/nodeos-mount-filesystems')
+    rimraf('/sbin')
+  }
+  catch(error)
+  {
+    // If `rootfs` is ead-only (like in `vagga`), ignore the error
+    if(error.code !== 'EROFS') return callback(error)
+  }
 
   // Symlinks for config data optained from `procfs`
   mkdirp('/etc', '0100', function(error)

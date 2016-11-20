@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeOS/nodeos-boot-singleUser.git"
+    "url": "https://github.com/piranna/nodeos-boot-singleUser.git"
   },
   "keywords": [
     "NodeOS"
@@ -16,11 +16,11 @@
   "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeOS/nodeos-boot-singleUser/issues"
+    "url": "https://github.com/piranna/nodeos-boot-singleUser/issues"
   },
-  "homepage": "https://github.com/NodeOS/nodeos-boot-singleUser",
+  "homepage": "https://github.com/piranna/nodeos-boot-singleUser",
   "dependencies": {
-    "async": "^2.0.1",
+    "async": "^2.1.2",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.5.4"
   },
