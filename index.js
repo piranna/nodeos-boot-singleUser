@@ -31,7 +31,7 @@ function basicEnvironment(callback)
 
     const symlinks =
     {
-      '/proc/mounts': '/etc/mtab',
+      '/proc/mounts': '/etc/mtab',  // TODO Maybe hardcode this on filesystem?
       '/proc/net/pnp': '/etc/resolv.conf'
     }
 
@@ -46,7 +46,7 @@ function basicEnvironment(callback)
     },
     function(error)
     {
-      if(error) return callback(error)
+      if(error && error.code !== 'EROFS') return callback(error)
 
       // Update environment variables
       var env = process.env
