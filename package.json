@@ -24,7 +24,7 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.1"
   },
-  "peerDependencies": {
-    "jocker": "^0.0.0"
+  "devDependencies": {
+    "jocker": "^0.0.1"
   }
 }
