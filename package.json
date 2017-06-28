@@ -1,6 +1,6 @@
 {
   "name": "nodeos-boot-singleUser",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Prepare a diskless NodeOS single user session",
   "bin": "server.js",
   "scripts": {
